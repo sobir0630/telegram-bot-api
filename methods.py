@@ -27,8 +27,19 @@ def send_message(user_id, text):
     requests.get(url, data=payload)
 
 def send_contact(user_id, phone_number, first_name):
-    pass
+    endpoint = 'sendContact'
+    url = f'{settings.BASE_URL}/{endpoint}'
+    
+    payload = {
+        'chat_id': user_id,
+        'phone_number': phone_number,
+        'first_name': first_name
+    }
+    requests.get(url, data=payload)
 
-user_id = 5895818044
-text = 'salom men ZiyoQuiz Botman'
-send_message(user_id, text)
+
+user_id = 1258594598
+phone_number = '+998991234567'
+first_name = "Ali"
+send_contact(user_id, phone_number, first_name)
+
