@@ -1,9 +1,3 @@
-import requests
-import settings
 
-enpoint = 'getMe'
-url = f'{settings.BASE_URL}/{enpoint}'
-reponse = requests.get(url)
 
-data = reponse.json()
-print(data)
+token = '8290898864:AAGxlT42mnd7CjLn4C7HZ8H38O-PQ1D9ZYs'
